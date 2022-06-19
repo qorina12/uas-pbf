@@ -358,14 +358,32 @@
 }
 
 /* Todos */
-.Todos {
-  width: 450px;
+.Todos2 {
+  width: 55%;
   height: 80%;
   background-color: white;
 
   position: absolute;
   bottom: 40px;
-  left: 40px;
+  left: 40%;
+
+  border-radius: 4px;
+  opacity: 0.9;
+
+  padding: 0 0.5rem 0.5rem 0.5rem;
+
+  overflow-y: auto;
+}
+
+/* Todos */
+.Todos {
+  width: 90%;
+  height: 80%;
+  background-color: white;
+
+  position: absolute;
+  bottom: 40px;
+  left: 5%;
 
   border-radius: 4px;
   opacity: 0.9;
@@ -375,6 +393,14 @@
   overflow-y: auto;
 }
 .Todos .selected-project {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+.Todos2 .selected-project {
   margin: 1rem 0;
   text-transform: capitalize;
   font-size: 1.2rem;

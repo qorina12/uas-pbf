@@ -1,0 +1,1 @@
+export const budgetTrackerItems = ['income', 'expenses']

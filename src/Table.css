@@ -1,0 +1,79 @@
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#table td,
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: #ddd;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.btn-edit-table:hover {
+  background-color: #2c9030; /* Green */
+}
+
+.btn-edit-table {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.btn-delete-table:hover {
+  background-color: #b2210e; /* Green */
+}
+
+.btn-delete-table {
+  background-color: #f33726; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.btn-add-table:hover {
+  background-color: #0261a1; /* Green */
+}
+
+.btn-add-table {
+  background-color: #127fde; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 3px;
+}

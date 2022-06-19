@@ -1,19 +1,33 @@
-import React from 'react'
-import logo from "../images/logo.jpg"
+import { signOut } from "firebase/auth";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/firebase";
+import logo from "../images/logo.jpg";
 
-function User(){
+function User() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    signOut(auth)
+      .then((user) => {
+        localStorage.removeItem("user");
+        navigate("/login");
+      })
+      .catch((error) => {});
+  };
 
-    return (
-        <div className='User'>
-            <div className="logo">
-                <img src={logo} alt="logo" />
-            </div>
-            <div className='info'>
-                <p>Shedule Anin</p>
-                <a href="#">Logout!</a>
-            </div>
-        </div>
-    )
+  return (
+    <div className="User">
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="info">
+        <p>Shedule Anin</p>
+        <a href="#" onClick={handleLogout}>
+          Logout!
+        </a>
+      </div>
+    </div>
+  );
 }
 
-export default User
+export default User;
