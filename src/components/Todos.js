@@ -4,6 +4,7 @@ import Next7Days from "./Next7Days";
 import { TodoContext } from "../context";
 import Expenses from "./Expenses";
 import Income from "./Income";
+import Report from "./Report";
 
 function Todos() {
   const { todos, selectedProject, isBudget } = useContext(TodoContext);
@@ -13,6 +14,8 @@ function Todos() {
       return <Income />;
     } else if (selectedProject === "expenses") {
       return <Expenses />;
+    } else if (selectedProject === "report") {
+      return <Report />;
     } else if (selectedProject === "next 7 days") {
       return <Next7Days todos={todos} />;
     } else {

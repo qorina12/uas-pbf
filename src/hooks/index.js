@@ -55,6 +55,24 @@ export function useFilterTodos(todos, selectedProject) {
   return filteredTodos;
 }
 
+export function useFilterIncome(incomes) {
+  const [filteredIncomes, setFilteredIncomes] = useState([]);
+
+  useEffect(() => {
+    var start_date = new Date();
+    var end_date = new Date();
+    end_date.setDate(end_date.getDate() + 5);
+
+    var start = moment(start_date, "MM/DD/YYYY");
+    var end = moment(end_date, "MM/DD/YYYY");
+
+    let data = incomes.filter((item) => {
+      const itemDate = moment(item.data.date, "MM/DD/YYYY");
+      return itemDate >= start && itemDate <= end;
+    });
+  }, [incomes]);
+}
+
 export function useProjects() {
   const [projects, setProjects] = useState([]);
 

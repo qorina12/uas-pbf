@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Trash2Fill } from "react-bootstrap-icons";
 import "../Table.css";
 import AddNewIncome from "./AddNewIncome";
